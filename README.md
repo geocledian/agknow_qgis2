@@ -1,4 +1,12 @@
 # agknow for QGIS >= 2.18.0 
+This plugin allows the usage of the remote sensing API ag|knowledge from geo|cledian.com. 
+The API provides a field monitoring service that allows to monitor any agricultural field worldwide 
+with a variety of vegetation indexes, crop parameters, times series analysis and comparison features based on satellite data.
+<p>
+Features of the plugin include the download and analysis of time series of visible and vegetation indexes rasters of registered fields. The data is based on Landsat-8 and Sentinel-2 currently. 
+See <a href="https://sites.google.com/site/geocledian">https://sites.google.com/site/geocledian</a> for a detailed product overwiew.
+<p>
+Please note that you will need a registered API key from geocledian.com to use this plugin for your area of interest. The plugin is delivered with a demo key that allows to access some demo parcels around the world for evaluation purposes.
 
 ## Why?
 - Convenient tool for Analysts if they want to work with the data of the agknow API directly in a desktop GIS
