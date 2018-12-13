@@ -1,10 +1,11 @@
 PLUGINNAME="agknow_qgis"
+VERSION="0.7.1"
 QGISDIR="~/.qgis2/python/plugins"
 BUILDDIR="./build/"$PLUGINNAME
 ZIPDIR="./build"
 
 cd $ZIPDIR
-zip -r $PLUGINNAME".zip" $PLUGINNAME
+zip -r $PLUGINNAME"2_"$VERSION".zip" $PLUGINNAME
 
 
 
