@@ -123,6 +123,32 @@ class AgknowUtils(object):
         except requests.ConnectionError as e:
             print(e)
 
+    def sync_http_post(self, base_url, params="", postdata="", ssl_verify=True):
+        """
+         Performs a HTTP GET request with the given base_url and optional URL parameters. Honors also a global boolean
+        SSL_VERIFY to override ssl_verify.
+
+        :param base_url: URL for the HTTP GET request
+        :param params: URL parameters (e.g. ?key=kkk&entity=eee), optional
+        :param postdata: JSON String as POST data load, required
+        :param ssl_verify: shall the host be verified according to its TLS certificate or not; default is True
+        """
+        #url = "https://vs3.geocledian.com/agknow/api/v3/parcels"
+        url = base_url + params
+
+        headers = {'Content-type': 'application/json'}
+        try:
+            # timeout 10 seconds
+            resp = requests.post(url, data=postdata, headers=headers, verify=ssl_verify, timeout=10.0)
+
+            if resp.status_code == 200:
+                return resp.text
+            else:
+                print(resp.status_code)
+
+        except ConnectionError as e:
+            print(e)
+
     def get_parcel_detail_data(self, base_url, api_key, parcel_id):
         """
          Gets the detail parcel data from the given URL, API key and parcel id such as

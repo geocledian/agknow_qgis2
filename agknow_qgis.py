@@ -207,6 +207,7 @@ class Agknow:
         # custom events
         self.main_dockwidget.imagesReloaded.disconnect(self.onImagesReloaded)
         self.main_dockwidget.dataSourceChanged.disconnect(self.onDatasourceChanged)
+        self.main_dockwidget.parcelIdChanged.disconnect(self.onParcelIdChanged)
         self.timeslider_dockwidget.productChanged.disconnect(self.onProductChanged)
 
         # closing events
@@ -317,7 +318,6 @@ class Agknow:
 
             self.main_dockwidget.show()
             self.timeslider_dockwidget.show()
-
 
     @pyqtSlot(str)
     def onDatasourceChanged(self, value):

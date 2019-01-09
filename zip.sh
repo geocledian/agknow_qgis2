@@ -1,5 +1,5 @@
 PLUGINNAME="agknow_qgis"
-VERSION="0.7.1"
+VERSION="0.7.2"
 QGISDIR="~/.qgis2/python/plugins"
 BUILDDIR="./build/"$PLUGINNAME
 ZIPDIR="./build"
